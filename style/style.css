@@ -7,34 +7,43 @@ body {
   font-family: "Mali", serif;
   font-weight: 700;
   font-style: italic;
-  background-image: url("../img/bg3.jpg") !important;
-  background-size: cover;
+  background-image: url("../img/bg3.jpg")!important;
+  background-size: cover;             
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  max-width: 800px;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vh;
+  margin: 0 auto;
   text-align: center;
   visibility: hidden;
+  position: relative;
   overflow: hidden;
 }
 
+.container div.six {
+  top: 10vh;
+  z-index: 1;
+}
+
+.container div.seven,
+.container div.eight {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
 .container > div {
-  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20vh;
 }
 
 .one {
-  font-size: 4rem;
+  font-size: 4.5rem;
 }
 
 .one > img {
@@ -50,12 +59,11 @@ body {
 }
 
 .three {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .four .text-box {
-  width: 90%;
-  max-width: 600px;
+  width: 600px;
   margin: 0 auto;
   border: 5px solid #ffffff;
   border-radius: 5px;
@@ -66,6 +74,10 @@ body {
 .text-box p {
   margin: 0;
   text-align: left;
+}
+
+.text-box span {
+  visibility: hidden;
 }
 
 .text-box .fake-btn {
@@ -80,31 +92,43 @@ body {
 
 .five p {
   font-size: 2rem;
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
-.idea-5 {
-  font-size: 3rem;
+.idea-3 strong {
+  padding: 3px 5px;
+  border-radius: 3px;
+  display: inline-block;
 }
 
-.idea-5 strong {
+.five .idea-5 {
+  font-size: 4rem;
+}
+
+.idea-5 strong{
   color: #ff69b4;
 }
 
+.idea-5 span,
+.idea-6 span,
+.wish-hbd span {
+  display: inline-block;
+  
+}
+
 .idea-6 span {
-  font-size: 12rem;
+  font-size: 15rem;
 }
 
 .six {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .six img {
-  display: block;
-  max-width: 50%;
+  display: inline-block;
+  max-width: 45%;
   height: auto;
 }
 
@@ -112,39 +136,157 @@ body {
   position: absolute;
   width: 80px;
   top: -35px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 41.5%;
+  /* transform: scale(0.1); */
 }
 
 .baloons img {
   display: inline-block;
   position: absolute;
-  width: 150px;
+  width: 200px;
+}
+
+.baloons img:nth-child(even) {
+  left: 10%;
+}
+
+.baloons img:nth-child(odd) {
+  right: 10%;
+}
+
+.baloons img:nth-child(3n + 0) {
+  left: 30%;
 }
 
 .eight svg {
   width: 25px;
   position: absolute;
+  top: 0;
+  left: 0;
   visibility: hidden;
   z-index: -1;
 }
 
+.eight svg:nth-child(1) {
+  top: 7vh;
+  left: 5vw;
+  fill: #bd6ecf;
+}
+
+.eight svg:nth-child(2) {
+  top: 23vh;
+  left: 35vw;
+  fill: #ffffff;
+}
+
+.eight svg:nth-child(3) {
+  top: 33vh;
+  left: 23vw;
+  fill: #ffee00;
+}
+
+.eight svg:nth-child(4) {
+  top: 43vh;
+  left: 57vw;
+  fill: #bd6ecf;
+}
+
+.eight svg:nth-child(5) {
+  top: 68vh;
+  left: 7vw;
+  fill: #ffffff;
+}
+
+.eight svg:nth-child(6) {
+  top: 42vh;
+  left: 77vw;
+  fill: #ffee00;
+}
+
+.eight svg:nth-child(7) {
+  top: 68vh;
+  left: 83vw;
+  fill: #bd6ecf;
+}
+
+.eight svg:nth-child(8) {
+  top: 86vh;
+  left: 37vw;
+  fill: #ffffff;
+}
+
+.eight svg:nth-child(9) {
+  top: 94vh;
+  left: 87vw;
+  fill: #ffee00;
+}
+
+.wish-hbd {
+  font-size: 3em;
+  margin: 0;
+  /* text-transform: uppercase; */
+}
+
+.wish h5 {
+  font-weight: lighter;
+  font-size: 2rem;
+  margin: 10px 0 0;
+}
+
+.nine p {
+  font-size: 4rem;
+}
+
+#replay {
+  z-index: 3;
+  cursor: pointer;
+}
+
 /* Media Queries */
-@media screen and (max-width: 600px) {
-  .one {
-    font-size: 3rem;
+@media screen and (max-height: 1000px) {
+  .six .hat {
+    left: 40%;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .six .hat {
+    left: 37%;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .six .hat {
+    left: 32%;
+  }
+}
+
+@media screen and (max-height: 850px) and (max-width: 450px) {
+  .six .hat {
+    left: 32%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 90%;
   }
 
-  .three {
-    font-size: 2rem;
+  .four .text-box {
+    width: 90%;
   }
 
-  .idea-5 {
-    font-size: 2.5rem;
+  .text-box .fake-btn {
+    right: 5px;
+    bottom: -38px;
+  }
+
+  .idea-5 span {
+    display: block;
   }
 
   .idea-6 span {
-    font-size: 8rem;
+    font-size: 10rem;
   }
 
   .six .hat {
@@ -153,7 +295,7 @@ body {
   }
 
   .wish-hbd {
-    font-size: 2rem;
+    font-size: 2.3em;
   }
 
   .wish h5 {
