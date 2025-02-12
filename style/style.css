@@ -229,7 +229,7 @@ body {
 
 .wish h5 {
   font-weight: lighter;
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin: 10px 0 0;
 }
 
@@ -299,11 +299,11 @@ body {
   }
 
   .wish h5 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .nine p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: lighter;
   }
 }
